@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GestiónApp || Empleados</title>
+    <style>
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            header {
+                padding: 10px;
+                display: flex;
+                position: fixed;
+                width: 100%;
+                background-color: rgb(217, 218, 172);
+                color: #53a3e4;
+                align-items:center;
+               justify-content: space-around;
+                
+                
+            
+                .logo {
+                    text-transform: capitalize; 
+                    margin-right: 30%;
+                    margin-left: -10%;
+                    min-width: 100px;
+                }
+
+                nav {
+                    
+                   
+                    
+                    ul {
+                        float: right;
+                        list-style: none;
+                        display: flex;
+                            
+                       
+                  li {
+                    
+                    margin-right:15% ;
+                   
+                   
+                   
+                    &:last-child a {
+                        
+                            border: 1px solid #53a3e4;
+                        }
+                  
+                        a{
+                        
+                        text-decoration: none;
+                        color: black;
+                        border-radius: 4px;
+                        padding: 4px;
+                        width: 100%;
+                       
+                        }
+
+                        .contact-btn:hover {
+                            background-color: #53a3e4;
+                            padding: 4px;
+                            color: aliceblue;
+                            border-radius: 4px;
+                        }
+
+                       
+                    }
+                 }     
+                }
+            }
+           
+            #form-container {
+                display: flex;
+                padding-top: 10%;;
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+                background-color: rgb(247, 236, 221);
+                padding: 15% 0 15% 0;
+                
+                
+                h2 {
+                    text-transform: uppercase;
+                    color: rgb(120, 175, 231);
+                    margin-bottom: 2%;
+                }
+
+                form {
+                    background-color: rgb(228, 230, 169);
+                    width: 20%;
+                    
+                    padding: 30px;
+                    min-width: 400px;
+                    min-height: 200px;
+                    height: 100%;
+                    border-radius: 15px;
+                    align-content: center;
+                    
+                    
+                    
+                    input {
+                        height: 30px;
+                        width: 100%;
+                        margin: 0 0 3% 0;
+                        border: 1px solid #53a3e4;
+                        border-radius: 5px;
+                        
+                    }
+
+                    span {
+                        color: rgb(65, 184, 192);
+                    }
+
+                    .empresa-asociada {
+                        margin-left: 3%;
+                        width: 100%;
+                    }
+
+                    .btn-wrapper {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        .submit-btn {
+                            width: 50%;
+                            
+                            margin-top: 20px;
+                            
+                            background-color: rgb(61, 172, 224);
+                            padding: 4px;
+                            color: aliceblue;
+                            border: 0;
+                            border-radius: 4px;
+                        }
+                    }
+                  
+
+                .submit-btn:hover {
+                    background-color: rgb(92, 214, 245);
+                    cursor: pointer;
+                }
+                
+                }
+
+
+                    
+                    
+                }
+            
+            footer {
+                
+                width: 100%;
+                height: 150px;
+                background-color: rgb(65, 65, 65);
+                color: aliceblue;
+                text-align:center;
+                align-content: end;
+                padding-bottom: 10px;
+                
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>GestiónAPP</h1>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.php" class="contact-btn">Volver</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="form-container">
+        <h2>Introduce una empresa</h2>
+       
+               
+
+                
+                <form action="departamento_logic.php" method="POST">
+                     <div>
+                        <!-- Nombre empresa-->
+                        <label for="nombre_departamento"></label>
+                        <input type="text" name="nombre_departamento" id="nombre_departamento" required placeholder="Introduce el nombre del departamento">
+                     </div>
+                    
+                    <div class="btn-wrapper">
+                        <input class="submit-btn" type="submit" value="Añadir">
+                    </div>
+                     
+                </form>
+        </section>      
+    </main>
+    <footer>
+        <p> 2025 Hecho con 👽 Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
