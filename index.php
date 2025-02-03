@@ -31,6 +31,7 @@
                         width: 30%;
                         cursor: pointer;
                     }
+
                     ul {
                         display: flex;
                         list-style: none;
@@ -57,37 +58,50 @@
                 }
             }
 
-            .menu-wrapper {
+
+@media (max-width:500px) {
+    /*Mover las filtros arriba cuando el monitor es pequeño
+    */
+}
+
+@media (max-width: 900px) {
+
+    .menu-wrapper {
                 width: 100%;
-               
+                display: flex;
                 gap: 20px;
                 justify-content: center;
                 padding: 20px;
            
-            
-         
-            }
+                    aside {
+                        margin: 0;
+                        padding: 0;
+                        background-color: #53a3e4;
+                        height: 100%;
+                    
+                        width: 200px;
+                        padding: 10px;
+                        margin-right: 5%;
+                    }
 
-           .menu {
-            width: 90%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 3fr)); 
-            gap: 30px;
-            align-items: center;
-            
-            .menu-item {
-                width: 300px;
-       
-                text-align: center;
+                    .menu {
+                        width: 70%;
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+                        gap: 30px;
+                            
                 
-            }
-
-        
+                        .menu-item {
+                            width: 300px;
+                
+                            text-align: center;
+                            
+                        }
+                    }
 
             div {
                 min-height: 400px;
                 min-width: 300px;
-               
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -119,6 +133,7 @@
                     z-index: 2;
 
                 }
+
                 a {
                     text-decoration: none;
                     text-transform: uppercase;
@@ -136,10 +151,12 @@
                         transform: scale(1.1);
                     }
                 }
+                }
             }
-           }
-            
         }
+           
+            
+    }
 
     </style>
 </head>
@@ -164,6 +181,9 @@
         </nav>
     </header>
     <div class="menu-wrapper">
+        <aside>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, id temporibus! Ea, voluptatum qui atque, quasi quod aspernatur non reiciendis veniam at eum eius reprehenderit suscipit est? Veritatis ad quibusdam enim. Consequuntur neque molestias ullam maxime aperiam nesciunt ut alias deleniti, hic, sed voluptate quaerat. Iste omnis quasi nam, rem, illum voluptatibus iure delectus, error perspiciatis alias consequatur eius voluptates fugit facilis. Maxime cum officia non ad veritatis aperiam corporis error nihil, rerum iusto quibusdam inventore ratione accusantium, nobis tempore ipsam optio possimus dolores, iste vel molestias atque. Minima voluptatibus vero nobis nemo libero placeat, maiores laudantium corporis sed animi!</p>
+        </aside>
         <section class="menu">
             <div class="menu-item">
                 
