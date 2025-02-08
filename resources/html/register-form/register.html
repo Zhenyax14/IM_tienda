@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crea tu cuenta</title>
+    <link rel="stylesheet" href="../../css/register-form.css">
+    
+</head>
+<body>
+<div class="form-container">
+    <h1>Crea tu cuenta</h1>
+    <form action="form_logic.php" method="post">
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>        
+        <input type="email" id="correo" name="correo" placeholder="Correo electrónico" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+        <input type="password" id="contrasena" name="contrasena"  placeholder="Contraseña" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$" required>
+        <a href="index2.html">Usar teléfono</a>
+
+        <div class="date-header">
+            <label>Fecha de nacimiento</label>
+        <p>Esta información no será pública. Confirma tu propia edad, incluso si esta cuenta es para una empresa, una mascota u otra cosa.</p>
+        </div>
+        
+        <div style="display: flex; gap: 10px;">
+            <label for="mes"></label>
+            <select id="mes" name="mes" required>
+                <option value="" disabled selected>Mes</option>
+                <option value="enero">Enero</option>
+                <option value="febrero">Febrero</option>
+                <option value="marzo">Marzo</option>
+                <!--   Aqui harÃ­a falta hacer un foreach y sacar los valores de la base datos, pero no llego hacerlo a tiempo -->
+
+            </select>
+            <label for="dia"></label>
+            <select id="dia" name="dia" required>
+                <option value="" disabled selected>Dí­a</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <!--   Aqui harÃ­a falta hacer un foreach y sacar los valores de la base datos, pero no llego hacerlo a tiempo. Necesito mÃ¡s tiempo -->
+
+            </select>
+            <label for="ano"></label>
+            <select id="ano" name="ano" required>
+                <option value="" disabled selected>Año</option>
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <!--   Aqui hará falta hacer un foreach y sacar los valores de la base datos, pero no llego hacerlo a tiempo -->
+
+            </select>
+        </div>
+        <div class="submit-btn">
+            <button type="submit">Siguiente</button>
+        </div>
+        
+    </form>
+</div>
+</body>
+</html>

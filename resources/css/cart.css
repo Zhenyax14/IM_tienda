@@ -1,0 +1,96 @@
+
+body {
+   
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 1000px) {
+
+    main {
+        width: 100%;
+     
+    }
+    body main .cart-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: 90%;
+       
+        background-color: white;
+        padding: 120px 0 0 0;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    
+    body main .cart-wrapper h2 {
+        text-align: center;
+        font-size: 1.8em;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    
+    
+    body main .cart-wrapper .cart-item {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    
+    body main .cart-wrapper .cart-item th, 
+    body main .cart-wrapper .cart-item td {
+        padding: 12px 20px;
+        text-align: left;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    body main .cart-wrapper .cart-item th {
+        background-color: #f9f9f9;
+        color: #555;
+        font-weight: bold;
+    }
+    
+    body main .cart-wrapper .cart-item td {
+        background-color: #fff;
+        color: #555;
+    }
+    
+    
+    body main .cart-wrapper .cart-item td img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    
+    
+    body main .cart-wrapper .cart-item tr:hover {
+        background-color: #fafafa;
+    }
+    
+    
+    body main .cart-wrapper .cart-item tr:hover td {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    
+    @media (max-width: 768px) {
+        body main .cart-wrapper  .cart-item th, .cart-item td {
+            padding: 10px;
+        }
+    
+        body main .cart-wrapper .cart-item td img {
+            width: 40px;
+            height: 40px;
+        }
+    
+        body main .cart-wrapper  .cart-wrapper {
+            width: 95%;
+        }
+    }
+
+}
