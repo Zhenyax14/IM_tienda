@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> || MENU</title>
+    <title> InmoSHOP || Tu pedido</title>
     <link rel="stylesheet" href="../../css/header/header.css">
     <link rel="stylesheet" href="../../css/cart.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -53,41 +53,89 @@
         </nav>
         
     </header>
- <!--- Fin barra de navegación ---> 
+    <!--- Fin barra de navegación ---> 
 
+    <!--- PREGUNTA IMPORTANTE:: este carrito tiene que ser un formulario?? --->
     <main>
         <div class="cart-wrapper">
-            <h2>Lista de Productos</h2>
-            <table class="cart-item">
-                <thead>
-                    <tr>
-                        <th>Foto</th>
-                        <th>Artículo</th>
-                        <th>Cantidad</th>
-                        <th>Precio</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><img src="https://via.placeholder.com/50" alt="Producto 1"></td>
-                        <td>Manzana</td>
-                        <td>5</td>
-                        <td>$1.00</td>
-                    </tr>
-                    <tr>
-                        <td><img src="https://via.placeholder.com/50" alt="Producto 2"></td>
-                        <td>Plátano</td>
-                        <td>3</td>
-                        <td>$0.80</td>
-                    </tr>
-                    <tr>
-                        <td><img src="https://via.placeholder.com/50" alt="Producto 3"></td>
-                        <td>Uvas</td>
-                        <td>2</td>
-                        <td>$2.50</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="cart-review">
+                <div class="cart-subtotal">
+                    <h2>Subtotal:</h2>
+                    <p>12000<span>€</span></p>
+                </div>
+                
+            </div>
+            
+            <div class="cart-body">
+                <div class="cart-item">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="../../media/img/apartments/1.jpg" alt="imagen_articulo">
+                            </a>
+                        </li>
+                        <li>
+                            <p>
+                                Casa familiar "LOLI"
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                5000€ * 1
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                IVA: <span>21%</span>
+                            </p>
+                        </li>
+                        <li>
+                        <p>TOTAL: <span>5000€</span></p>
+                        </li>
+                        <li class="cart-item-quantity">
+                            <a href="">-</a>
+                            <span>1</span>
+                            <a href="">+</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cart-item">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="../../media/img/apartments/2.jpg" alt="imagen_articulo">
+                            </a>
+                        </li>
+                        <li>
+                            <p>
+                                Casa "Beowulf"
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                3500€ * 2
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                IVA: <span>21%</span>
+                            </p>
+                        </li>
+                        <li>
+                            <p>TOTAL: <span>7000€</span></p>
+                        </li>
+                        <li class="cart-item-quantity">
+                            <a href="">-</a>
+                            <span>2</span>
+                            <a href="">+</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="cart-payment-btn">
+                    <button type="submit">PAGO SEGURO</button>
+                </div>
         </div>
     </main>
 
@@ -103,15 +151,18 @@
                 <li></li>
             </ul>
         </section>
-        <section class="network">
+        <section class="socials">
             <ul>
                 <li>
                     <h3>Nuestras redes sociales</h3>
                     <div class="underscore-bar"></div>
                 </li>
-                <li><a href=""><img src="" alt="facebook"></a></li>
-                <li><a href=""><img src="" alt="youtube"></a></li>
-                <li><a href=""><img src="" alt="X"></a></li>
+                <div class="socials-icons">
+                    <li><a href=""><img src="../../media/img/icons/facebook.png" alt="facebook"></a></li>
+                    <li><a href=""><img src="../../media/img/icons/youtube.png" alt="youtube"></a></li>
+                    <li><a href=""><img src="../../media/img/icons/whatsapp.png" alt="whatsapp"></a></li>
+                </div>
+               
 
             </ul>
         </section>

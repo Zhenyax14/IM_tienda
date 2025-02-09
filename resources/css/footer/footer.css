@@ -52,7 +52,12 @@
     footer .socials .socials-icons  li a img {
         width: 30px;
     }
+
+    footer .socials .socials-icons  li a:hover img {
+        transform: scale(1.1);
+    }
 }
+
 
 @media (min-width: 901px) {
     footer {
@@ -76,6 +81,11 @@
         color: lightyellow;
     }
 
+    footer section a:hover {
+        text-decoration: underline;
+        color: var(--main_yellow);
+    }
+
     footer section h3 {
         text-transform: uppercase;
         color: var(--main_yellow);
@@ -95,5 +105,9 @@
 
     footer .socials .socials-icons  li a img {
         width: 40px;
+    }
+
+    footer .socials .socials-icons  li a:hover img {
+        transform: scale(1.1);
     }
 }

@@ -58,6 +58,14 @@
         font-family: 'Trebuchet MS', sans-serif;
         transition: background 0.5s ease;
     }
+
+    .nav > ul  li:last-child  a {
+        border-right: none;
+            
+    }
+        
+        
+    }
     
     .nav > ul li a:hover {
         background-color: var(--main_yellow);
@@ -92,7 +100,7 @@
         width: 1px;
         background-color: var(--main_yellow);
     }
-}
+
 
 @media (min-width:1001px) {
 
@@ -181,5 +189,10 @@
         height: 30px;
         width: 1px;
         background-color: var(--main_yellow);
+    }
+
+    .nav > ul  li:last-child  a {
+        border-right: none;
+            
     }
 }
