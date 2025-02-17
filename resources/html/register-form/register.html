@@ -11,7 +11,8 @@
 <div class="form-container">
     <h1>Crea tu cuenta</h1>
     <form action="form_logic.php" method="post">
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>        
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+        <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>        
         <input type="email" id="correo" name="correo" placeholder="Correo electrónico" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
         <input type="password" id="contrasena" name="contrasena"  placeholder="Contraseña" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$" required>
         <a href="index2.html">Usar teléfono</a>

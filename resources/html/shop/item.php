@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InmoSHOP || Casas </title>
     <link rel="stylesheet" href="./../../css/header/header.css">
-    <link rel="stylesheet" href="./../../css/shop.css">
+    <link rel="stylesheet" href="./../../css/item.css">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./../../css/footer/footer.css">
     
@@ -15,7 +16,7 @@
         <nav class="nav">
            
                 <a class="navbar-logo" href="../../../index.html">
-                    <img src="../../media/img/logo/logo.png" >
+                    <img src="../../media/img/logo/logo.png">
                 </a>
                 <ul>
                     <li>
@@ -50,71 +51,41 @@
         </nav>
     </header>
     <main>
-        <div class="menu-wrapper">
-                <!-- Añadir datalist como opciones de filtros -->
-                <form action="" class="filters">
-                    <div>
-                        <label for="filter-order">Ordenar por:</label>
-                        <select name="" id="">
-                            <option value="">Precio</option>
-                            <option value="">Nombre</option>
-                            <option value="">Ciudad</option>
-                        </select>
-                        
-                    </div>
-                    <div>
-                        <label for="filter-order">Orden:</label>
-                        <select name="" id="">
-                            <option value="">ASC</option>
-                            <option value="">DESC</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="filter-search">Buscar</label>
-                        <input type="text" name="search" id="search">
-                    </div>
-                    
-                </form>
-            <section class="menu">
-                <div class="menu-item">
-                  
+        <div class="item-wrapper">
+            <div class="item">
+                  <div class="item-carousel">
+                    <span><</span>
                     <img src="../../media/img/apartments/1.jpg" alt="imagen">
-                    <span class="overlay-text">Casa prefabricada de EE.UU</span>
-                    <div>
-                        <a href="item.php">Más detalles</a>
-                        <button  value=""><img src="../../media/img/icons/wishlist.png" alt="addToWishList"></button>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="../../media/img/apartments/2.jpg" alt="imagen">
-                    <span class="overlay-text">Casa prefabricada, perfecta para una escapada al bosque</span>
-                    <div>
-                        <a href="item.php">Más detalles</a>
-                        <button  value=""><img src="../../media/img/icons/wishlist.png" alt="addToWishList"></button>
-                    </div>
                     
-                </div>
-                <div class="menu-item">
-                    
-                    <img src="../../media/img/apartments/3.jpg" alt="imagen">
-                    <span class="overlay-text">Casas prefabricadas de Suecia</span>
-                    <div>
-                        <a href="item.php">Más detalles</a>
-                        <button  value=""><img src="../../media/img/icons/wishlist.png" alt="addToWishList"></button>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    
-                    <img src="./media/img/empleado.jpg" alt="imagen">
-                    <span class="overlay-text">En esta sección se puede añadir nuevos empleados de diferentes categorias</span>
-                    <div>
-                        <a href="item.php">Más detalles</a>
-                        <button  value=""><img src="../../media/img/icons/wishlist.png" alt="addToWishList"></button>
-                    </div>
-                </div>
-            </section>
+                    <span>></span>
+                  </div>
+                  <div class="item-photos">
+                    <img src="../../media/img/apartments/1.jpg" alt="imagen">
+                    <img src="../../media/img/apartments/1.jpg" alt="imagen">
+                    <img src="../../media/img/apartments/1.jpg" alt="imagen">
+                  </div>
+                 
+                  <div class="item-info">
+                    <h3 class="overlay-text">Casa prefabricada de EE.UU</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam perspiciatis officiis adipisci eligendi fugiat sapiente aspernatur distinctio beatae incidunt quas blanditiis, nemo dignissimos maxime? Totam enim veniam, magnam libero ad laborum tempore reprehenderit praesentium illo alias cumque deleniti asperiores dolorum et, voluptatibus ducimus magni sed provident consequatur deserunt voluptates eligendi. Excepturi, repellat id culpa eos impedit voluptatibus laborum laudantium doloremque totam voluptas a, numquam nemo quo, distinctio harum tempore atque? Omnis magnam quod earum dolor numquam facere architecto vel sint, deleniti culpa porro repudiandae eaque iusto ab optio dignissimos tempora sit, in veniam ipsum assumenda! Dignissimos eos atque voluptate doloribus.                  
+                    </p>
+                  </div>
+                  
+                  <ul class="item-tags">
+                    <li><a href="">1 Habitación</a></li>
+                    <li><a href="">1 planta</a></li>
+                    <li><a href="">Piscina</a></li>
+                    <li><a href="">Madera</a></li>
+                  </ul>
+                  <div class="item-buttons">
+                      <a href="#">Añadir al carrito</a>
+                      <button  value=""><img src="../../media/img/icons/wishlist.png" alt="addToWishList">Lista de deseado</button>
+                  </div>
+            </div>
         </div>
     </main>
+        
    <footer>
         <section class="contact-info">
             <ul>
