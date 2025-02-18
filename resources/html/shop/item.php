@@ -47,7 +47,12 @@
                             <a href="#">Iniciar sesión</a>
                         </li>
                     </ul>
-                </div>    
+                </div> 
+                <div id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>   
         </nav>
     </header>
     <main>

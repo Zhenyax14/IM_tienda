@@ -19,7 +19,7 @@ body {
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1060px) {
     main {
         width: 100%;
         display: flex;
@@ -29,7 +29,6 @@ body {
 
     main .menu-wrapper {
         width: 100%;
-       
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -37,31 +36,90 @@ body {
         padding: 90px 20px 20px 20px;
     }
 
-    main .menu-wrapper .filters {
-        margin: 10px 0 0 0;
-        align-items: center;
-        padding: 30px;
-        height: 50px;
-        background-color: #929598;
-        color: white;
-        text-transform: uppercase;
-        border-radius: 20px;
-        gap: 20px;
+    body .menu-wrapper .filters {
         display: flex;
-       
+        flex-direction: row;
+        align-items: center;
+        margin: 20px 0 0 0;
+        padding: 15px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: var(--main_grey);
+        border-radius: 10px; 
+        height: 90%;
+        width: 90%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
     }
-
-    main .filters div {
-        color: white;
+    
+    body .menu-wrapper .filters div {
+        margin: 0 20px 0 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    body .menu-wrapper .filters div input,
+    body .menu-wrapper .filters select {
+        min-width: 50%;
+        height: 30px;
+        border: 1px solid #fff; 
+        background-color: white; 
+        color: #2c3e50; 
+        font-size: 16px;
+        border-radius: 8px; 
+        outline: none;
+        transition: all 0.3s ease-in-out; 
+    }
+    
+    body .menu-wrapper .filters div input:focus,
+    body .menu-wrapper .filters select:focus {
+        border-color: #3498db; 
+        box-shadow: 0 0 5px rgba(52, 152, 219, 0.8); 
+    
+    }
+    body .menu-wrapper .filters select {
+        appearance: none; 
+        cursor: pointer;
+        position: relative;
+    }
+    
+    body .menu-wrapper .filters select::-ms-expand {
+        display: none; 
+    }
+    
+ 
+    
+    body .menu-wrapper .filters .filters-btn-wrapper {
+        width: 100%;
         
-       
+        display: flex;
+        justify-content: center;
+        text-align: center;
     }
-
-    main .filters div input {
-       
-        border: 1px dashed #ffffff;
+    
+    body .menu-wrapper .filters .filters-btn {
+        border: none;
+        height: 100%;
+        background-color: var(--main_yellow); 
+        color: var(--main_grey);
+        padding: 15px ;
+        border-radius: 30px;
+        min-width: 50px; 
+        font-weight: bold;
+        text-transform: none;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s ease;
     }
-
+    
+    body .menu-wrapper .filters .filters-btn:hover {
+        background-color: #ffee57;
+        transform: scale(1.05); 
+    }
+    
+    body .menu-wrapper .filters .filters-btn:active {
+        transform: scale(0.98); 
+    }
     main .menu {
         width: 100%;
         display: flex;
@@ -148,7 +206,7 @@ body {
     
 }
 
-@media (min-width: 1001px) {
+@media (min-width: 1061px) {
 
     body .menu-wrapper {
         width: 100%;
@@ -162,15 +220,83 @@ body {
     }
     
     body .menu-wrapper .filters {
-        margin: 0 10% 0 0;
-        padding: 0;
-        color: white;
+        display: flex;
+        flex-direction: column;
+        margin: 0 5%;
+        padding: 15px;
+        color: #fff;
         text-transform: uppercase;
-        background-color: #8d9196;
-        height: 500px;
-        width: 200px;
-        padding: 10px;
+        background-color: var(--main_grey);
+        border-radius: 10px; 
+        height: 400px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
     }
+    
+    body .menu-wrapper .filters div {
+        margin-bottom: 20px;
+    }
+    
+    body .menu-wrapper .filters div input,
+    body .menu-wrapper .filters select {
+        width: 100%;
+        padding: 12px 15px; 
+        border: 1px solid #fff; 
+        background-color: white; 
+        color: #2c3e50; 
+        font-size: 16px;
+        border-radius: 8px; 
+        outline: none;
+        transition: all 0.3s ease-in-out; 
+    }
+    
+    body .menu-wrapper .filters div input:focus,
+    body .menu-wrapper .filters select:focus {
+        border-color: #3498db; 
+        box-shadow: 0 0 5px rgba(52, 152, 219, 0.8); 
+    
+    }
+    body .menu-wrapper .filters select {
+        appearance: none; 
+        cursor: pointer;
+        position: relative;
+    }
+    
+    body .menu-wrapper .filters select::-ms-expand {
+        display: none; 
+    }
+    
+
+    
+    body .menu-wrapper .filters .filters-btn-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    body .menu-wrapper .filters .filters-btn {
+        border: none;
+        background-color: var(--main_yellow); 
+        color: var(--main_grey);
+        padding: 15px 20px;
+        border-radius: 30px;
+        width: 70%; 
+        font-weight: bold;
+        text-transform: none;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    body .menu-wrapper .filters .filters-btn:hover {
+        background-color: #ffee57;
+        transform: scale(1.05); 
+    }
+    
+    body .menu-wrapper .filters .filters-btn:active {
+        transform: scale(0.98); 
+    }
+    
+    
     
     body .menu-wrapper .menu {
         width: 70%;

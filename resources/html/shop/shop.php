@@ -46,6 +46,11 @@
                             <a href="../login-form/login.html">Iniciar sesión</a>
                         </li>
                     </ul>
+                </div>
+                <div id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>    
         </nav>
     </header>
@@ -56,22 +61,25 @@
                     <div>
                         <label for="filter-order">Ordenar por:</label>
                         <select name="" id="">
-                            <option value="">Precio</option>
-                            <option value="">Nombre</option>
-                            <option value="">Ciudad</option>
+                            <option value="precio">Precio</option>
+                            <option value="nombre">Nombre</option>
+                            <option value="ciudad">Ciudad</option>
                         </select>
                         
                     </div>
                     <div>
                         <label for="filter-order">Orden:</label>
                         <select name="" id="">
-                            <option value="">ASC</option>
-                            <option value="">DESC</option>
+                            <option value="ASC">ASC</option>
+                            <option value="DESC">DESC</option>
                         </select>
                     </div>
                     <div>
                         <label for="filter-search">Buscar</label>
                         <input type="text" name="search" id="search">
+                    </div>
+                    <div class="filters-btn-wrapper">
+                        <input class="filters-btn" type="submit" value="Buscar">
                     </div>
                     
                 </form>
