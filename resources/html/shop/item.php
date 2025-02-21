@@ -83,6 +83,10 @@
                     <li><a href="">Piscina</a></li>
                     <li><a href="">Madera</a></li>
                   </ul>
+                  <div class="item-price">
+                    <h3>PRECIO: </h3>
+                    <p>1500€ + IVA</p>
+                  </div>
                   <div class="item-buttons">
                       <a href="#">Añadir al carrito</a>
                       <button  value=""><img src="../../media/img/icons/wishlist.png" alt="addToWishList">Lista de deseado</button>

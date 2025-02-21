@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InmoSHOP || Casas </title>
-    <link rel="stylesheet" href="./../../css/header/header.css">
-    <link rel="stylesheet" href="./resources/css/dashboard.css">
+    <link rel="stylesheet" href="../../../../css/header/header.css"">
+    <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./../../css/footer/footer.css">
+    <link rel="stylesheet" href="../../../../css/footer/footer.css">
     
 </head>
 <body>
@@ -15,14 +15,14 @@
         <nav class="nav">
            
                 <a class="navbar-logo" href="dashboard.php">
-                    <img src="../../media/img/logo/logo.png" >
+                    <img src="../../../../media/img/logo/logo.png" >
                 </a>
                 <ul>
                     <li>
-                        <a href="dashboard.php" class="active">Resumen</a>
+                        <a href="../../dashboard.php">Resumen</a>
                     </li>
                     <li>
-                        <a href="./resources/html/casaupdate.php">Gestionar casas</a>
+                        <a class="active" href="casaupdate.php">Gestionar casas</a>
                     </li>
                     <li>
                         <a href="../../../index.html">Gestionar agentes</a>
@@ -38,7 +38,7 @@
                 <div class="nav-session">
                     <ul>
                         <li>
-                            <a href="../../../index.html">Cerrar sesión</a>
+                            <a href="../../../../../index.html">Cerrar sesión</a>
                         </li>
                     </ul>
                 </div>
@@ -51,23 +51,44 @@
     </header>
     <main>
         <div class="menu-wrapper">
-                <!-- Añadir datalist como opciones de filtros -->
-                <form action="" class="filters">
-                    <div>
-                        <label for="filter-order">Visitas en últimas 24h:</label>
-                        
-                        
-                    </div>
-                    <div>
-                        <label for="filter-order">Usuarios nuevos en últimas 24h:</label>
-                        
-                    </div>
-                    
-                    
-                    
-                </form>
-            <section class="menu">
                 
+                
+            <section class="menu">
+                <div class="menu-item">
+                    <img src="../../media/img/apartments/1.jpg" alt="imagen">
+                    <span class="overlay-text">Casa prefabricada de EE.UU</span>
+                    <div>
+                        <a href="item.php">Editar</a>
+                        <button  value=""><img src="../media/img/trash.png" alt="DELETE"></button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="../../media/img/apartments/2.jpg" alt="imagen">
+                    <span class="overlay-text">Casa prefabricada, perfecta para una escapada al bosque</span>
+                    <div>
+                        <a href="item.php">Editar</a>
+                        <button  value=""><img src="../media/img/trash.png" alt="DELETE"></button>
+                    </div>
+                    
+                </div>
+                <div class="menu-item">
+                    
+                    <img src="../../media/img/apartments/3.jpg" alt="imagen">
+                    <span class="overlay-text">Casas prefabricadas de Suecia</span>
+                    <div>
+                        <a href="item.php">Editar</a>
+                        <button  value=""><img src="../media/img/trash.png" alt="DELETE"></button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    
+                    <span></span>
+                    
+                    <div class="item-add">
+                        <a href="item.php">Añadir nueva casa</a>
+                        
+                    </div>
+                </div>
             </section>
         </div>
     </main>
@@ -90,9 +111,9 @@
                     <div class="underscore-bar"></div>
                 </li>
                 <div class="socials-icons">
-                    <li><a href=""><img src="../../media/img/icons/facebook.png" alt="facebook"></a></li>
-                    <li><a href=""><img src="../../media/img/icons/youtube.png" alt="youtube"></a></li>
-                    <li><a href=""><img src="../../media/img/icons/whatsapp.png" alt="whatsapp"></a></li>
+                    <li><a href=""><img src="../../../../media/img/icons/facebook.png" alt="facebook"></a></li>
+                    <li><a href=""><img src="../../../../media/img/icons/youtube.png" alt="youtube"></a></li>
+                    <li><a href=""><img src="../../../../media/img/icons/whatsapp.png" alt="whatsapp"></a></li>
                 </div>
                
 

@@ -251,7 +251,7 @@ body {
     main .menu-item {
         padding: 20px;
         width: 100%;
-        height: 200px;
+        height: 130px;
         display: grid;
         grid-template-columns: 1fr 3fr 1fr;
         gap: 20px;
