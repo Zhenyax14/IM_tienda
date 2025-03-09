@@ -122,6 +122,29 @@ class CasaController
                 $propiedad = new Propiedad();
             }
 
+
+            // Handle image upload if provided
+            $imagePath = null;
+            if (!empty($_FILES['thumbnail']['name'])) {
+                $uploadDir = 'http://127.0.0.1:8000/img/apartments';
+                $imageName = basename($_FILES['thumbnail']['name']);
+                $targetPath = $_SERVER['DOCUMENT_ROOT'] . $uploadDir . $imageName;
+
+                // Ensure the upload directory exists
+                if (!file_exists($_SERVER['DOCUMENT_ROOT'] . $uploadDir)) {
+                    mkdir($_SERVER['DOCUMENT_ROOT'] . $uploadDir, 0777, true);
+                }
+
+                // Move uploaded file
+                if (move_uploaded_file($_FILES['thumbnail']['tmp_name'], $targetPath)) {
+                    $imagePath = $uploadDir . $imageName;
+                } else {
+                    throw new Exception('Error al subir la imagen.');
+                }
+            }
+
+            // Set the image path in the property
+            $propiedad->thumbnail = $imagePath;
             // Set the property fields
             $propiedad->titulo = $titulo;
             $propiedad->descripcion = $descripcion;
@@ -131,6 +154,7 @@ class CasaController
             $propiedad->id_tipos = $id_tipos;
             $propiedad->usuario_agente = $usuario_agente;
 
+            //var_dump($_FILES)
             // Save (insert or update) the property
             if ($propiedad->save()) {
                 // Redirect if successful

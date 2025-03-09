@@ -14,7 +14,8 @@ class Propiedad extends Model
         'fecha_creacion',
         'fecha_mod',
         'id_tipos',
-        'usuario_agente'
+        'usuario_agente',
+        'thumbnail'
     ];
 
 

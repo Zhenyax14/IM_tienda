@@ -20,6 +20,7 @@
         <input type="number" id="metros" name="metros" placeholder="Metros cuadrados" required>
         <input type="text" id="precio" name="precio" placeholder="Precio" required>
         <input type="text" id="descripcion" name="descripcion"  placeholder="Descripción"  required>
+        <input type="file" name="thumbnail" required>
         <!--- Esta parte de abajo de momento la omito, porque tiene su complejidad a la hora de modularizar
         Y como hoy es la entrega ya, no llego. Para tercer trimestre
         --->

@@ -84,7 +84,7 @@
                 <?php if (!empty($propiedades)): ?>
                      <?php foreach ($propiedades as $propiedad): ?>
                         <div class="menu-item">
-                            <img src="<?= htmlspecialchars($propiedad['titulo']) ?>">
+                            <img src="<?= htmlspecialchars($propiedad['thumbnail']) ?>" alt="<?= htmlspecialchars($propiedad['titulo']) ?>">
                             <h3 class="overlay-text"><?= htmlspecialchars($propiedad['titulo']) ?></h3>
                             <p class="overlay-text"><?= htmlspecialchars($propiedad['descripcion']) ?></p>
                             <span class="overlay-text"><?= htmlspecialchars($propiedad['precio']) ?>€</span>
