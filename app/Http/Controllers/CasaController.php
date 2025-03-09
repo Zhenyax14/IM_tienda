@@ -15,15 +15,11 @@ class CasaController
 
     public function __construct()
     {
-         ////validar casa
+         
         $this->service = new CasaService();
     }
 
-    /**
-     * Mostrar todas las casas
-     *
-     * @throws Exception
-     */
+   
     /**
      * Mostrar todas las casas
      *

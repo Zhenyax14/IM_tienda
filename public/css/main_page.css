@@ -2,6 +2,7 @@
 @import url("footer/footer.css");
 /* Estilos generales */
 body {
+    
     overflow: auto;
   
     background-color: rgb(66, 66, 66);
@@ -122,6 +123,99 @@ body {
     color: black;
 }
 
+/*
+Carousel parcheo rápido
+=================================================
+*/
 
+/* Flex Container */
+.carousel {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+    gap: 20px; /* Space between items */
+    justify-content: space-between; /* Distributes items evenly */
+    padding: 20px;
+}
 
+/* Individual Item */
+.menu-item {
+    flex: 1 1 calc(33.33% - 20px); /* Each item takes up 1/3 of the container width */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background: #fff; /* Card background */
+}
+
+/* Hover Effect */
+.menu-item:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+}
+
+/* Image Styling */
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Text Content */
+.overlay-text {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Button Container */
+.menu-item div {
+    display: flex;
+    justify-content: space-between; /* Space between buttons */
+    align-items: center;
+    margin-top: 15px;
+}
+
+/* Links and Buttons */
+.menu-item a {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: white;
+    background-color: #ff6f61;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu-item a:hover {
+    background-color: #e64a39; /* Darker shade on hover */
+}
+
+.menu-item button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Wishlist Icon */
+.menu-item button img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s ease;
+}
+
+.menu-item button img:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .menu-item {
+        flex: 1 1 calc(50% - 20px); /* 2 items per row on medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-item {
+        flex: 1 1 100%; /* 1 item per row on small screens */
+    }
+}
 

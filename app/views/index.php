@@ -109,9 +109,35 @@
 
     <!--- Segundo bloque de contenido --->
         
-        <section class="carousel ">
-            AQUI VA CAROUSEL
-        </section>
+    <section class="carousel-container">
+    <div class="carousel">
+    <div class="carousel">
+    <?php if (!empty($propiedades)): ?>
+        <!-- Un apaño para mostrar solo 4 propiedades, porque limit() del Model todavía no he podido hacer y no me queda tiempo ya --->
+        <?php foreach (array_slice($propiedades, 0, 4) as $propiedad): ?>
+            <div class="menu-item">
+                <img src="<?= htmlspecialchars($propiedad['thumbnail']) ?>" alt="Propiedad Thumbnail">
+                <h3 class="overlay-text"><?= htmlspecialchars($propiedad['titulo']) ?></h3>
+                <p class="overlay-text"><?= htmlspecialchars($propiedad['descripcion']) ?></p>
+                <span class="overlay-text"><?= htmlspecialchars($propiedad['precio']) ?>€</span>
+                <div>
+                    <a href="/casas/show?id=<?= htmlspecialchars($propiedad['id']) ?>">Más detalles</a>
+                    <button>
+                        <img src="http://127.0.0.1:8000/img/icons/wishlist.png" alt="addToWishList">
+                    </button>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    <?php else: ?>
+        <p>No hay casas disponibles.</p>
+    <?php endif; ?>
+</div>
+
+   
+</section>
+
+
+
         <section class="content-2">
             <div class="separator-text">        
                 <h1>Los recuerdos te esperan!</h1>
@@ -194,6 +220,7 @@
         </section>
     </footer>
     <script src="http://127.0.0.1:8000/js/header.js"></script>
+    <script src="http://127.0.0.1:8000/js/carousel.js"></script>
 </body>
 
 

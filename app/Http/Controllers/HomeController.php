@@ -11,12 +11,14 @@ use Exception;
 class HomeController
 {
 
-    private NotFoundService $service;
+    private NotFoundService $NotFoundService;
+    private CasaService $CasaService;
     private Validator $validator;
 
     public function __construct()
     {
-        $this->service = new NotFoundService();
+        $this->NotFoundService = new NotFoundService();
+        $this->CasaService = new CasaService();
     }
 
     /**
@@ -26,6 +28,11 @@ class HomeController
      */
     public function index(): void
     {
+        $data = [
+            'orderBy' => $_GET['orderBy'] ?? 'fecha_mod',
+            'direction' => $_GET['direction'] ?? 'DESC'
+        ];
+        $propiedades = $this->CasaService->index($data);
         include(views('index'));
 
 
