@@ -1,0 +1,503 @@
+@import url("config.css");
+@import url("header/header.css");
+@import url("footer/footer.css");
+
+
+main {
+    margin: 150px 0 0 0;
+    
+}
+
+@media (max-width:1000px) {
+    
+    main .item-wrapper {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        margin: 0 50px 200px 30px;
+        background-color: var(--main_yellow);
+       
+    }
+
+    main .item-wrapper .item {
+        padding: 50px;
+        width: 100%;
+        min-height: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        
+      
+        
+        
+        background-color: white;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3), 0 4px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+   
+    
+   
+    
+    main .item-wrapper .item img {
+        border-radius: 10%;
+        margin: 0 0 50px 0;
+        height: 400px;
+        width: 350px;
+        z-index: 2;
+        
+    }
+
+    main .item-wrapper .item .item-info {
+       
+        display: flex;
+        flex-direction: column;
+        
+        
+    }
+
+    main .item-wrapper .item h3 {
+       
+        margin: 0 0 20px 0;
+        
+        
+    }
+    
+    main .item-wrapper .item div {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        
+    }
+
+  
+
+    main .item-wrapper .item .item-photos img {
+       height: 120px;
+       width: auto;
+        
+    }
+
+    
+
+    main .item-wrapper .item .item-buttons {
+        display: flex;
+       
+        gap: 20px;
+        
+     }
+    
+    main .item-wrapper .item div a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-style: italic;
+        color: rgb(255, 255, 255);
+        background-color: #53a3e4;
+        width: 260px;
+        padding: 20px;
+        height: 100%;
+        
+        border-radius: 10px;
+        transition-duration: 0.2s;
+        border: none;
+        
+    }
+
+    main .item-wrapper .item div button {
+       display: flex;
+       color: #53a3e4;
+       align-items: center;
+       gap: 10px;
+       text-decoration: none;
+       text-transform: uppercase;
+       font-style: italic;
+       background-color: #53a3e4;
+       padding: 20px;
+       border-radius: 10px;
+       transition-duration: 0.2s;
+       border: none;
+       height: 100%;
+       
+    }
+    
+    main  .item-wrapper .item div a:hover,
+    main .item-wrapper  .item div button:hover {
+        cursor: pointer;
+        color: #53a3e4;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid #53a3e4;
+        transform: scale(1.1);
+    }
+    
+    main  .item-wrapper .item div button {
+       
+        background-color: white;
+        border: 1px solid #53a3e4;
+       
+    }
+
+    main .item-wrapper .item div button img{
+        height: auto;
+        width: 20px;
+        margin: 0;
+       
+    }
+
+  
+
+      main .item-wrapper .item .item-tags{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin: 50px 0 50px 0;
+        padding: 0;
+        
+        
+        list-style: none;
+        
+         
+    }
+
+    main .item-wrapper .item .item-tags li{
+        width: 100%;
+        border: 1px solid var(--main_yellow);
+        border-radius: 20px;
+        text-align: center;
+        padding: 0 10px 0 10px;
+        
+         
+    }
+
+    main .item-wrapper .item .item-tags li a{
+        text-decoration: none;
+        color: #53a3e4;
+        text-transform: uppercase;
+        
+         
+    }
+
+    main .item-wrapper .item .item-tags li:hover{
+        background-color: var(--main_yellow);
+
+        a {
+            color: var(--main_grey);
+        }
+        
+        
+         
+    }
+
+    main .item-wrapper .item .item-price{
+        width: 100%;
+        margin: 0 0 100px 0;
+       display: flex;
+       justify-content: start;
+       gap: 20px;
+       
+      
+         
+      }
+  
+      main .item-wrapper .item .item-price h3{
+         text-transform: uppercase;
+         font-style: italic;
+         color: var(--main_grey);
+           
+        }
+
+      main .item-wrapper .item .item-price p{
+        text-transform: uppercase;
+        font-size: 22px;
+        
+        
+        color: var(--main_grey);
+          
+       }
+
+
+    /* Carousel de imagenes */
+    .item-carousel {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        
+        
+        border-radius: 10px;
+        
+        
+        
+      }
+      
+      .item-carousel span {
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 50px;
+        padding: 5px 13px;
+        transition: color 0.3s;
+        color: #53a3e4;
+        
+        border-radius: 50%;
+       
+      }
+      
+      .item-carousel span:hover {
+        transform: scale(1.1);
+      }
+      
+      .item-carousel img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+
+      main .item-wrapper .item .item-photos {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        
+    }
+      
+}
+
+/* Necesitaré ayuda sobre grid layout */
+
+@media (min-width:1001px) {
+    main {
+        margin-top: 100px;
+    }
+    
+    main .item-wrapper {
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        margin: 0 50px 200px 30px;
+        background-color: var(--main_yellow);
+       
+    }
+
+    main .item-wrapper .item {
+        padding: 50px;
+        width: 100%;
+        min-height: 800px;
+        display: grid;
+        grid-template-rows: 500px 400px;
+        grid-template-columns: 500px 100px ;
+        
+        
+        
+      
+        
+        
+        background-color: white;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3), 0 4px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    main .item-wrapper .item .item-info {
+        display: flex;
+        flex-direction: column;
+    }
+    
+   
+    
+    main .item-wrapper .item img {
+        border-radius: 10%;
+        margin: 0 0 50px 0;
+        height: 400px;
+        width: 350px;
+        z-index: 2;
+        
+    }
+
+    main .item-wrapper .item .item-info {
+       
+        display: flex;
+        flex-direction:column;
+        
+        
+    }
+    
+    main .item-wrapper .item .item-info h3 {
+       
+        margin: 0 0 20px 0;
+        
+        
+    }
+    
+    main .item-wrapper .item div {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        
+    }
+
+  
+
+    main .item-wrapper .item .item-photos img {
+       height: 120px;
+       display: grid;
+       width: auto;
+        
+    }
+
+    main .item-wrapper .item .item-tags{
+       margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        gap: 20px;
+        
+        
+        
+        list-style: none;
+        
+         
+    }
+
+    main .item-wrapper .item .item-tags li{
+        width: 100%;
+        border: 1px solid var(--main_yellow);
+        border-radius: 20px;
+        text-align: center;
+        padding: 0 10px 0 10px;
+        
+         
+    }
+
+    main .item-wrapper .item .item-tags li a{
+        text-decoration: none;
+        color: #53a3e4;
+        text-transform: uppercase;
+        
+         
+    }
+
+    main .item-wrapper .item .item-tags li:hover{
+        background-color: var(--main_yellow);
+
+        a {
+            color: var(--main_grey);
+        }
+        
+        
+         
+    }
+
+    main .item-wrapper .item .item-buttons {
+        display: flex;
+       flex-direction: column;
+       margin: 50px 0 50px 0;
+       width: 100%;
+        gap: 20px;
+        
+     }
+    
+    main .item-wrapper .item div a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-style: italic;
+        color: rgb(255, 255, 255);
+        background-color: #53a3e4;
+        width: 260px;
+        padding: 20px;
+        height: 100%;
+        
+        border-radius: 10px;
+        transition-duration: 0.2s;
+        border: none;
+        
+    }
+
+    main .item-wrapper .item div button {
+       display: flex;
+       color: #53a3e4;
+       align-items: center;
+       gap: 10px;
+       text-decoration: none;
+       text-transform: uppercase;
+       font-style: italic;
+       background-color: #53a3e4;
+       padding: 20px;
+       border-radius: 10px;
+       transition-duration: 0.2s;
+       border: none;
+       height: 100%;
+       width: 260px;
+       
+    }
+    
+    main  .item-wrapper .item div a:hover,
+    main .item-wrapper  .item div button:hover {
+        cursor: pointer;
+        color: #53a3e4;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid #53a3e4;
+        transform: scale(1.1);
+    }
+    
+    main  .item-wrapper .item div button {
+       
+        background-color: white;
+        border: 1px solid #53a3e4;
+       
+    }
+
+    main .item-wrapper .item div button img{
+        height: auto;
+        width: 20px;
+        margin: 0;
+       
+    }
+
+
+    /* Carousel de imagenes */
+    .item-carousel {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        
+        
+        border-radius: 10px;
+        
+        
+        
+      }
+      
+      .item-carousel span {
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 50px;
+        padding: 5px 13px;
+        transition: color 0.3s;
+        color: #53a3e4;
+        
+        border-radius: 50%;
+       
+      }
+      
+      .item-carousel span:hover {
+        transform: scale(1.1);
+      }
+      
+      .item-carousel img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+
+      main .item-wrapper .item .item-photos {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        
+    }
+      
+}

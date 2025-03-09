@@ -3,46 +3,35 @@
 namespace App\http\Controllers;
 
 use App\classes\Validator;
+use App\models\Persona;
 use App\models\Propiedad;
-use App\services\CasaService;
+use App\services\PersonaService;
 use Exception;
 
-class CasaController
+class PersonaController
 {
 
-    private CasaService $service;
+    private PersonaService $service;
     private Validator $validator;
 
     public function __construct()
     {
-         ////validar casa
-        $this->service = new CasaService();
+        //$this->validator; validar persona
+        $this->service = new PersonaService();
     }
 
     /**
-     * Mostrar todas las casas
-     *
-     * @throws Exception
-     */
-    /**
-     * Mostrar todas las casas
-     *
      * @throws Exception
      */
     public function index(): void
     {
-        // Capture filter parameters with defaults
-        $data = [
-            'orderBy' => $_GET['orderBy'] ?? 'fecha_mod',
-            'direction' => $_GET['direction'] ?? 'ASC',
-            'search' => $_GET['search'] ?? '',
-        ];
+
 
         $propiedades = $this->service->index($data);
 
 
         // Include the view and pass the properties
-        include views('shop.index');
+        include views('register-form.index');
     }
 
 
@@ -57,14 +46,25 @@ class CasaController
     public function show(): void
     {
 
-        $propiedad = $this->service->find();
 
-            if ($propiedad) {
+        if (isset($_GET['id']) && is_numeric($_GET['id'])) {
+            $id = (int) $_GET['id'];
 
-                include(views('shop.item'));
+
+
+            $usuario = new Persona();
+            $usuario->findById($id);
+
+            if ($usuario) {
+
+                include(views('admin.persona.show'));
             } else {
                 echo "Propiedad no encontrada";
             }
+        } else {
+
+            echo "Id invalido";
+        }
     }
 
 
@@ -102,53 +102,59 @@ class CasaController
     public function store(array $data): void
     {
         try {
-            var_dump($data);
-            // Retrieve the ID from the form data (if it exists)
-            $id = isset($_POST['id']) ? (int) $_POST['id'] : null;
+            //var_dump($data);
+            //var_dump($_POST);
 
-            // Validate form fields
+
+            // Validate and sanitize the 'id' passed in $data
+
+            if (!isset($_POST['id'])) {
+                throw new Exception('Invalid property ID.');
+            }
+
+            // Castear id del POST. $data no me deja y es null
+            $id =  $_POST['id'];
+            //var_dump($id);
+            // Retrieve the property to update
+            $propiedad = new Propiedad();
+            $propiedad->findById($id);
+            var_dump($propiedad);
+
+            if (!$propiedad) {
+                throw new Exception('Propiedad no encontrada.');
+            }
+
+            // Limpiar entradas
             $titulo = isset($_POST['titulo']) ? htmlspecialchars(trim($_POST['titulo'])) : '';
             $descripcion = isset($_POST['descripcion']) ? htmlspecialchars(trim($_POST['descripcion'])) : '';
             $precio = isset($_POST['precio']) ? (float) $_POST['precio'] : 0.0;
-            $metros = isset($_POST['metros']) ? htmlspecialchars(trim($_POST['metros'])) : '';
-            $id_tipos = isset($_POST['id_tipos']) ? (int) $_POST['id_tipos'] : 1;
-            $usuario_agente = isset($_POST['usuario-agente']) ? (int) $_POST['usuario-agente'] : 1;
 
-            // If the ID is set, find the existing property
-            if ($id) {
-                $propiedad = new Propiedad();
-                $propiedad->findById($id);
-                if (!$propiedad) {
-                    throw new Exception('Propiedad no encontrada.');
-                }
-            } else {
-                // Create a new Propiedad if no ID is provided
-                $propiedad = new Propiedad();
-            }
 
-            // Set the property fields
+
+            $id_tipos = $_POST['id_tipos'];
+            $usuario_agente = $_POST['usuario_agente'];
+
+            // Update the property with new data
             $propiedad->titulo = $titulo;
             $propiedad->descripcion = $descripcion;
             $propiedad->precio = $precio;
-            $propiedad->fecha_mod = date('Y-m-d H:i:s');
-            $propiedad->metros = $metros;
-            $propiedad->id_tipos = $id_tipos;
-            $propiedad->usuario_agente = $usuario_agente;
+            $propiedad->id_tipos = $id_tipos;  // Set id_tipos to 1
+            $propiedad->usuario_agente = $usuario_agente;  // Set usuario_agente to 1
 
-            // Save (insert or update) the property
+            //Actualizar la propiedad
             if ($propiedad->save()) {
-                // Redirect if successful
+                // Redireccionar si éxito
                 header('Location: /admin/casas/index');
                 exit;
             } else {
-                throw new Exception('No ha sido posible guardar la propiedad.');
+                throw new Exception('No ha sido posible actualizar la propiedad.');
             }
+
         } catch (Exception $e) {
             // Handle the exception by logging or displaying an error message
             echo "Error: " . $e->getMessage();
         }
     }
-
 
 
 
@@ -176,14 +182,51 @@ class CasaController
         } catch (Exception $e) {
             echo "Error: " . $e->getMessage();
         }
+
+
     }
 
-    public function create(): void
+    //
+    //
+    //
+
+    /**
+     * @throws Exception
+     */
+    public function loginIndex(): void
     {
-        include views('admin.casas.create');
-
-
+        include views('login-form.index');
     }
+
+
+
+
+    /**
+     * Registrar un usuario
+     */
+    public function create(array $params = []): void
+    {
+        try {
+            //Faltaría validarlo
+            $data = $_POST;
+
+
+            $persona = $this->service->create(['POST' => $data]);
+
+            if ($persona) {
+                // Redireccionar tras el éxito
+                header("Location: /");
+                exit;
+            }
+        } catch (Exception $e) {
+            echo 'Error al crear usuario: ' . $e->getMessage();
+        }
+    }
+
+
+
+
+
 
 
 }

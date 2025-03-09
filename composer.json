@@ -1,0 +1,22 @@
+{
+    "name": "shevtsovtn/test-andata",
+    "description": "Test assignment for ANDATA company.",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": "^8",
+        "ext-mysqli": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "timur.shevtsov",
+            "email": "timur.shevtsov1984@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
