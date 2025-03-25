@@ -1,0 +1,10 @@
+
+[2025-03-25 19:11:39] SELECT * FROM propiedades ORDER BY `fecha_mod` DESC
+[2025-03-25 19:11:55] SELECT * FROM propiedades ORDER BY `fecha_mod` ASC
+[2025-03-25 19:12:13] SELECT * FROM propiedades ORDER BY `titulo` DESC
+[2025-03-25 19:12:26] SELECT * FROM propiedades WHERE titulo LIKE "%loft%" ORDER BY `precio` ASC
+[2025-03-25 19:12:36] SELECT * FROM propiedades WHERE id = "6"
+[2025-03-25 19:12:55] SELECT * FROM personas ORDER BY `id` ASC
+[2025-03-25 19:13:50] SELECT * FROM propiedades ORDER BY `fecha_mod` DESC
+[2025-03-25 19:15:31] SELECT * FROM personas ORDER BY `id` ASC
+[2025-03-25 19:16:00] SELECT * FROM propiedades ORDER BY `fecha_mod` DESC

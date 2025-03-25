@@ -1,10 +1,10 @@
 <?php
 
-namespace App\http\Controllers;
+namespace App\Http\Controllers;
 
 use App\classes\Validator;
-use App\models\Propiedad;
-use App\services\CasaService;
+use App\Models\Propiedad;
+use App\Services\CasaService;
 use Exception;
 
 class CasaController
@@ -106,7 +106,8 @@ class CasaController
             $titulo = isset($_POST['titulo']) ? htmlspecialchars(trim($_POST['titulo'])) : '';
             $descripcion = isset($_POST['descripcion']) ? htmlspecialchars(trim($_POST['descripcion'])) : '';
             $precio = isset($_POST['precio']) ? (float) $_POST['precio'] : 0.0;
-            $metros = isset($_POST['metros']) ? htmlspecialchars(trim($_POST['metros'])) : '';
+            $metros = isset($_POST['metros']) && is_numeric($_POST['metros']) ? (float) $_POST['metros'] : 0.0;
+
             $id_tipos = isset($_POST['id_tipos']) ? (int) $_POST['id_tipos'] : 1;
             $usuario_agente = isset($_POST['usuario-agente']) ? (int) $_POST['usuario-agente'] : 1;
 

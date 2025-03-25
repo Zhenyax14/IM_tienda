@@ -5,7 +5,7 @@ namespace App\http\Controllers;
 use App\classes\Validator;
 use App\models\Persona;
 use App\models\Propiedad;
-use App\services\PersonaService;
+use App\Services\PersonaService;
 use Exception;
 
 class PersonaController

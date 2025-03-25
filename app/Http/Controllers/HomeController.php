@@ -1,11 +1,11 @@
 <?php
 
-namespace App\http\Controllers;
+namespace App\Http\Controllers;
 
 use App\classes\Validator;
-use App\services\CasaService;
-use App\services\HomeService;
-use App\services\NotFoundService;
+use App\Services\CasaService;
+use App\Services\HomeService;
+use App\Services\NotFoundService;
 use Exception;
 
 class HomeController

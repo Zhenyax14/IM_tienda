@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'shevtsovtn/test-andata',
-        'pretty_version' => 'dev-master',
-        'version' => 'dev-master',
-        'reference' => '76a5e97a9d452e0363601e5594bc0938b0f659bc',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '4fa877704a4f115724b349b900d0e58ef9ca69e8',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'shevtsovtn/test-andata' => array(
-            'pretty_version' => 'dev-master',
-            'version' => 'dev-master',
-            'reference' => '76a5e97a9d452e0363601e5594bc0938b0f659bc',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '4fa877704a4f115724b349b900d0e58ef9ca69e8',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

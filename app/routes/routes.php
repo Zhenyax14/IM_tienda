@@ -1,12 +1,12 @@
 <?php
 
 
-use App\http\Controllers\AdminController;
-use App\http\Controllers\CasaController;
-use App\http\Controllers\CestaController;
-use App\http\Controllers\HomeController;
-use App\http\Controllers\NotFoundController;
-use App\http\Controllers\PersonaController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CasaController;
+use App\Http\Controllers\CestaController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NotFoundController;
+use App\Http\Controllers\PersonaController;
 
 
 

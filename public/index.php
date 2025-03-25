@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ALL & ~E_WARNING); // This will suppress warnings but still show other types of errors.
+//error_reporting(E_ALL & ~E_WARNING); // This will suppress warnings but still show other types of errors.
 
 use App\providers\AppProvider;
 

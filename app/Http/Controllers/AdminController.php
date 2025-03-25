@@ -3,10 +3,10 @@
 namespace App\http\Controllers;
 
 use App\classes\Validator;
-use App\services\CasaService;
-use App\services\HomeService;
-use App\services\NotFoundService;
-use App\services\PersonaService;
+use App\Services\CasaService;
+use App\Services\HomeService;
+use App\Services\NotFoundService;
+use App\Services\PersonaService;
 use Exception;
 
 class AdminController

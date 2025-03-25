@@ -4,8 +4,8 @@
 namespace App\http\Controllers;
 
 use App\classes\Validator;
-use App\services\CasaService;
-use App\services\HomeService;
+use App\Services\CasaService;
+use App\Services\HomeService;
 use Exception;
 
 class NotFoundController

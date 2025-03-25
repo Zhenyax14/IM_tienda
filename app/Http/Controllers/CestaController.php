@@ -3,7 +3,7 @@
 namespace App\http\Controllers;
 
 use App\classes\Validator;
-use App\services\CasaService;
+use App\Services\CasaService;
 use Exception;
 
 class CestaController

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\models;
+namespace App\Models;
 
 use App\db\Database;
 use Exception;
@@ -143,6 +143,7 @@ abstract class Model
                 throw new Exception('Error updating record: ' . $db->error);
             }
 
+            error_log($sql);
             return $this->id;
         } else {
             // Ensure id is not included for new records
@@ -155,7 +156,7 @@ abstract class Model
             }, $this->data);
 
             $sql = "INSERT INTO {$this->table} (`" . implode('`, `', $fields) . "`) VALUES (" . implode(', ', $values) . ")";
-
+            error_log($sql);
             if (!$db->query($sql)) {
                 throw new Exception('Error inserting record: ' . $db->error);
             }
@@ -290,6 +291,10 @@ abstract class Model
     protected function execute(): int|array
     {
         if ($this->sql) {
+
+            file_put_contents(__DIR__ . '/sql_queries.log', "[" . date('Y-m-d H:i:s') . "] $this->sql" . PHP_EOL, FILE_APPEND | LOCK_EX);
+
+            error_log($this->sql);
             switch ($this->typeSql) {
                 case 'select':
                     $result = $this->ins_db->query($this->sql);
